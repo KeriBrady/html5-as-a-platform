@@ -8,23 +8,15 @@ $("#type").on("focusout", function() {
   }
 });
 
-$("#adoptCat").hide();
+
 
 // cat popup
-$("#submit").submit(function() {
-  $("#adoptCat").show();
-  // $("#")
-})
+$("#adoptCat").hide();
 
+$("#submit").on("click", function(e) {
+  e.preventDefault();
+  if ($("input").val()) {
+    $("#adoptCat").show();
+  }
+});
 
-
-
-// (function() {
-//    var dialog = document.getElementById('window');
-//    document.getElementById('show').onclick = function() {
-//        dialog.show();
-//    };
-//    document.getElementById('exit').onclick = function() {
-//        dialog.close();
-//    };
-// })();
